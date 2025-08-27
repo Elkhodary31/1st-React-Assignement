@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin './hero.js';
+/* Note: You may need to change the path to fit your project structure */
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+.center {
+    @apply flex items-center justify-center;
+}
+
+@theme {
+    --color-primary: #1abc9c;
+    --color-secondary: #2c3e50;
+    --color-footer: #1a252f;
+}
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+.active{
+    @apply bg-primary p-3 rounded-lg ;
+}
